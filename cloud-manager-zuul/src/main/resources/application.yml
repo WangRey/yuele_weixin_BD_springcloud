@@ -1,0 +1,32 @@
+server:
+  port: 10001
+spring:
+  application:
+    name: eureka-client-yueleWeixin-zuul
+eureka:
+  client:
+    service-url:
+      # 服务端的注册地址
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,,http://eureka7003.com:7003/eureka/
+#网关相关配置
+zuul:
+  routes:
+    # 定义路由id，随意写，但是多ID不要重复
+    manager:
+      # 匹配的路由规则
+      path: /manager/**
+      # 路由的目标服务名
+      serviceId: eureka-client-yueleWeixin-root
+    service:
+      path: /yuele/shop/**
+      serviceId: eureka-client-yueleWeixin-shop
+ribbon:
+  ConnectTimeout: 555000 # 连接超时时间(ms)
+  ReadTimeout: 555000 # 通信超时时间(ms)
+hystrix:
+  command:
+    default:
+    execution:
+    isolation:
+    thread:
+    timeoutInMilliseconds: 560000 # 设置hystrix的超时时间为6000ms
