@@ -21,6 +21,11 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+        <!--    druid数据源    -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+        </dependency>
         <!--    导入Redis依赖    -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
