@@ -1,3 +1,4 @@
+
 spring:
   jackson:
     time-zone: GMT+8
@@ -19,19 +20,28 @@ spring:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     database: mysql
     show-sql: true
-#  redis:
-#    host: 39.97.102.209
-#    password: 123456789
-#    database: 2
-#    port: 6379
-#    jedis:
-#      pool:
-#        max-active: 100
-#        max-wait: 5000
-#        max-idle: 10
-#        min-idle: 0
+  redis:
+    host: 123.56.71.68
+    password: 31415926
+    database: 8
+    port: 6379
+    jedis:
+      pool:
+        max-active: 100
+        max-wait: 5000
+        max-idle: 10
+        min-idle: 0
   application:
     name: eureka-client-yueleWeixin-shop
+# 阿里云存储参数配置
+aliyun:
+  oss:
+    endpoint: oss-cn-beijing.aliyuncs.com
+    accessKeyId: LTAI5tDb1x6U6KYUUJ7eFGvU
+    accessKeySecret: e1IT1h3yBDJqmMNZ7sMba7R3HNHOiZ
+    bucketName: my-flower-shop
+
+
 server:
   port: 9002
 

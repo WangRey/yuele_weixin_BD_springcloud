@@ -1,4 +1,4 @@
-package org.sicnu.shop.utils.jwtUtils;
+package org.sicnu.shop.utilJwt;
 
 
 import com.auth0.jwt.JWT;

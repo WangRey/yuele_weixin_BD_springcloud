@@ -1,4 +1,4 @@
-package org.sicnu.shop.utils.redisUtils;
+package org.sicnu.shop.utilRedis;
 
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;

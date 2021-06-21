@@ -1,4 +1,4 @@
-//package org.sicnu.shop.utils.jwtUtils;
+//package org.sicnu.shop.jwtUtils;
 //
 //
 //import java.lang.annotation.ElementType;
