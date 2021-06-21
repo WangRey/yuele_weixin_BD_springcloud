@@ -20,6 +20,9 @@ zuul:
     service:
       path: /yuele/shop/**
       serviceId: eureka-client-yueleWeixin-shop
+#      微服务配置+zuul配置=有跨域问题  多次配置 所以，在转发到其他微服务之前省略以下头文件
+#    sensitive-headers: Access-Control-Allow-Origin
+#      ignored-headers: Access-Control-Allow-Origin,H-APP-Id,Token,APPToken
 ribbon:
   ConnectTimeout: 555000 # 连接超时时间(ms)
   ReadTimeout: 555000 # 通信超时时间(ms)
