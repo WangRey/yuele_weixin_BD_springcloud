@@ -8,7 +8,7 @@ import org.sicnu.shop.model.AjaxResponse;
 import org.sicnu.shop.model.Userinfo;
 import org.sicnu.shop.model.VOmodel.UserInfoVO;
 import org.sicnu.shop.service.LoginService;
-import org.sicnu.shop.utils.jwtUtils.JWTHelper;
+import org.sicnu.shop.utilJwt.JWTHelper;
 import org.springframework.util.DigestUtils;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

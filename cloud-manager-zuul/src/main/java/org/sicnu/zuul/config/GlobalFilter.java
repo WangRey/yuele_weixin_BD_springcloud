@@ -38,6 +38,8 @@ public class GlobalFilter  extends ZuulFilter {
 
     private static final String LOGIN_REQUEST = "login";
 
+    private static final String REGISTER_REQUEST = "add";
+
     /**
      * filterType：返回一个字符串代表过滤器的类型，在zuul中定义了四种不同生命周期的过滤器类型，具体如下：
      * pre：路由之前
@@ -83,7 +85,11 @@ public class GlobalFilter  extends ZuulFilter {
         // 响应类型
         rc.getResponse().setContentType("application/json;charset=utf-8");
         //是登录那没事了
-        if (request.getServletPath().endsWith(LOGIN_REQUEST)) {
+        if (request.getServletPath().endsWith(LOGIN_REQUEST) ||request.getServletPath().endsWith(REGISTER_REQUEST)  ) {
+            return null;
+        }
+        //test
+        if (request.getServletPath().endsWith("log")) {
             return null;
         }
         String token = request.getHeader("token");
