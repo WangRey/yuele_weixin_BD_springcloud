@@ -2,6 +2,7 @@ package org.sicnu.root;
 
 import org.sicnu.root.repo.GoodsRepo;
 import org.sicnu.root.repo.GoodstoreRepo;
+import org.sicnu.root.repo.OrderbuyRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -19,6 +20,8 @@ public class RootApplication {
     private GoodsRepo goodsRepo;
     @Autowired
     private GoodstoreRepo goodstoreRepo;
+    @Autowired
+    private OrderbuyRepo orderbuyRepo;
 
     public static void main(String[] args){
         SpringApplication.run(RootApplication.class,args);

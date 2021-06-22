@@ -29,9 +29,33 @@ public class GoodsController {
     }
 
     @CrossOrigin
+    @GetMapping(value = "/goods",produces = "application/json; charset=utf-8")
+    public List<Goods> getAllGoods(){
+        List<Goods> result = goodsRepo.getGoodsAll();
+        return result;
+    }
+
+    @CrossOrigin
     @GetMapping(value = "/show_goods",produces = "application/json; charset=utf-8")
     public List<Goods> getProducts(@RequestParam(value = "typename",required = false) String typename){
         List<Goods> result = goodsRepo.getGoodsByTypename(typename);
+        return result;
+    }
+
+    @CrossOrigin
+    @PostMapping(value = "/select_goods_by_id",produces = "application/json; charset=utf-8")
+    public Map<String,Object> selectGoodsId(@RequestParam(value ="id",required = true) Integer id) {
+        Goods goods = goodsRepo.getById(id);
+
+        Map<String, Object> result = new HashMap<String, Object>();
+        result.put("title",goods.getTitle());
+        result.put("typename",goods.getTypename());
+        result.put("img",goods.getImg());
+        result.put("remark",goods.getRemark());
+        result.put("price",goods.getPrice());
+        result.put("number",goods.getNumber());
+        result.put("checked",goods.getChecked());
+        result.put("goodsid",goods.getGoodsid());
         return result;
     }
 
