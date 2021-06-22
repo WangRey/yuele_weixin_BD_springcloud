@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 
+import javax.persistence.Column;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -18,9 +19,9 @@ public class UserInfoVO implements Serializable {
     private String email;
 
     private String nickName ;
-
+    private String headImage;
     private String phone;
-
+    private String balance;
     private String realName ;
 
     private Sex sex;

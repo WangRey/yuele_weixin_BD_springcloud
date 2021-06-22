@@ -18,17 +18,17 @@ public class Userinfo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(length = 32,nullable = false)
+    @Column(length = 128,nullable = false)
     private String email;
 
 
-    @Column(length = 32, nullable = false)
+    @Column(length = 128, nullable = false)
     private String nickName ;
 
     @Column(nullable = false)
     private String phone;
 
-    @Column(length = 32, nullable = false)
+    @Column(length = 128, nullable = false)
     private String realName ;
 
     @Column(length = 255, nullable = false)
@@ -38,11 +38,13 @@ public class Userinfo {
     @Enumerated(EnumType.STRING)
     private Sex sex = null;
 
-    @Column(length = 64,nullable = false)
+    @Column(length = 128,nullable = false)
     private String idCard;
 
     @Column
     private String balance;
+    @Column
+    private String headImage;
 
     @Column
     @Temporal(TemporalType.DATE)

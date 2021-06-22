@@ -20,12 +20,14 @@ public class WebExceptionHandler {
         return AjaxResponse.error(e);
     }
 
-//    @ExceptionHandler(Exception.class)
-//    @ResponseBody
-//    public AjaxResponse exception(Exception e) {
-//        //TODO 将异常信息持久化处理，方便运维人员处理
-//        return AjaxResponse.error(new DefException(ExceptionType.OTHER_ERROR,"未知异常"));
-//    }
+    @ExceptionHandler(Exception.class)
+    @ResponseBody
+    public AjaxResponse exception(Exception e) {
+        //TODO 将异常信息持久化处理，方便运维人员处理
+//        System.out.println();
+        e.printStackTrace();
+        return AjaxResponse.error(new DefException(ExceptionType.OTHER_ERROR,"用户输入错误"));
+    }
 
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
