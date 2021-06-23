@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
+import javax.xml.soap.SAAJResult;
 
 @Entity
 public class Orderbuy {
@@ -22,6 +23,18 @@ public class Orderbuy {
     private String userid;
 
     private String goodsid;
+
+    private String img;
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
+
+
 
     public Integer getId() {
         return id;

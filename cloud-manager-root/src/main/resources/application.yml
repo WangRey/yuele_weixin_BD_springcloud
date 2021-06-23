@@ -2,8 +2,8 @@ spring:
   jackson:
     time-zone: GMT+8
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/yuele_weixin2?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false
-    username: root8
+    url: jdbc:mysql://127.0.0.1:3306/yuele_weixin?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
     password: A156423djh
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
