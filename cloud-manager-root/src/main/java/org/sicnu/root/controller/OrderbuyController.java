@@ -18,13 +18,14 @@ public class OrderbuyController {
 
     @CrossOrigin
     @PostMapping(value = "/add_order",produces = "application/json; charset=utf-8")
-    public Map<String,Object> addOrder(@RequestParam(value = "userid",required = true) String userid, @RequestParam(value = "price",required = true) String price, @RequestParam(value = "number",required = true) Integer number, @RequestParam(value ="goodsid",required = true) String goodsid,@RequestParam(value ="title",required = true) String title) {
+    public Map<String,Object> addOrder(@RequestParam(value = "userid",required = true) String userid, @RequestParam(value = "price",required = true) String price, @RequestParam(value = "number",required = true) Integer number, @RequestParam(value ="goodsid",required = true) String goodsid,@RequestParam(value ="title",required = true) String title,@RequestParam(value ="img",required = true) String img) {
         Orderbuy order = new Orderbuy();
         order.setNumber(number);
         order.setGoodsid(goodsid);
         order.setPrice(price);
         order.setTitle(title);
         order.setUserid(userid);
+        order.setImg(img);
         orderbuyRepo.save(order);
         Map<String, Object> result = new HashMap<String, Object>();
         result.put("status", "ok");
@@ -39,6 +40,7 @@ public class OrderbuyController {
         List<Orderbuy> result = orderbuyRepo.getOrderbuyByuserid(userid);
         return result;
     }
+
 
 
 
