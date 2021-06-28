@@ -44,10 +44,10 @@ spring:
 # 阿里云存储参数配置
 aliyun:
   oss:
-    endpoint: oss-cn-beijing.aliyuncs.com_WANGRUI
-    accessKeyId: LTAI5tDb1x6U6KYUUJ7eFGvU_WANGRUI
-    accessKeySecret: e1IT1h3yBDJqmMNZ7sMba7R3HNHOiZ_WANGRUI
-    bucketName: my-flower-shop_WANGRUI
+    endpoint:
+    accessKeyId:
+    accessKeySecret:
+    bucketName:
 
 
 server:
